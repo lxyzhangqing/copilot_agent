@@ -13,6 +13,7 @@ class State(TypedDict):
     messages: Annotated[list, add_messages]
 
 
+# 有工具调用时，需绑定工具
 tools = [search_tool, sum_tool]
 llm_with_tools = base_llm.bind_tools(tools)
 
